@@ -13,4 +13,8 @@ export class TaskService {
   async findAll(): Promise<Task[]> {
     return this.taskModel.find();
   }
+
+  async create(task: Task): Promise<Task> {
+    return this.taskModel.create(task)
+  }
 }
