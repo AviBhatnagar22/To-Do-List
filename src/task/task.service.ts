@@ -17,4 +17,8 @@ export class TaskService {
   async create(task: Task): Promise<Task> {
     return this.taskModel.create(task)
   }
+
+  async findById(id): Promise<Task> {
+    return this.taskModel.findById(id);
+  }
 }
