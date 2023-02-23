@@ -19,6 +19,8 @@ export class TaskService {
   }
 
   async findById(id): Promise<Task> {
-    return this.taskModel.findById(id);
+    const task = await this.taskModel.findById(id);
+    console.log(task._id)
+    return task;
   }
 }

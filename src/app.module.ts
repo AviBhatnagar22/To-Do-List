@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { TaskModule } from './task/task.module';
+import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 
 @Module({
@@ -11,6 +12,7 @@ import { AuthModule } from './auth/auth.module';
       'mongodb+srv://AviBhatnagar:4lic8gonBkd2Otab@cluster0.3xen19x.mongodb.net/to-do-list?retryWrites=true&w=majority',
     ),
     TaskModule,
+    UserModule,
     AuthModule,
   ],
   controllers: [AppController],
