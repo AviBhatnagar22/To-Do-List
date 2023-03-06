@@ -1,8 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import * as mongoose from 'mongoose';
-import { Types } from "mongoose";
 
-@Schema()
+@Schema({versionKey: false})
 export class Task {
   @Prop()
   title: string;
